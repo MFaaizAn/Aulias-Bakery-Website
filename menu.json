@@ -1,0 +1,8 @@
+[
+    { "id": "M01", "nama": "Roti Tawar Gandum", "harga": 25000, "kategori": "Roti" },
+    { "id": "M02", "nama": "Choco Lava Cake", "harga": 35000, "kategori": "Kue" },
+    { "id": "M03", "nama": "Strawberry Shortcake", "harga": 45000, "kategori": "Kue" },
+    { "id": "M04", "nama": "Croissant Butter", "harga": 20000, "kategori": "Pastry" },
+    { "id": "M05", "nama": "Muffin Blueberry", "harga": 28000, "kategori": "Kue" },
+    { "id":"M06", "nama": "Risol Oreo", "harga": 15000, "kategori": "Kue"}
+]

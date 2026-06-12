@@ -1,0 +1,114 @@
+:root {
+            --dark-red: #893941;
+            --pink: #CB7885;
+            --light-green: #D4D994;
+            --bg-light: #FDFBFB;
+            --text-dark: #333333;
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        
+        body { 
+            display: flex; 
+            min-height: 100vh; 
+            background-color: var(--bg-light); 
+            color: var(--text-dark); 
+        }
+
+        /* --- SIDEBAR KIRI --- */
+        .sidebar {
+            width: 250px;
+            background-color: var(--dark-red);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 { 
+            font-family: "Chewy", system-ui; 
+            color: var(--light-green); 
+            margin-bottom: 30px; 
+            letter-spacing: 1px;
+        }
+        
+        .sidebar a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 12px; 
+            margin-bottom: 10px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover, .sidebar a.active { 
+            background-color: var(--pink); 
+        }
+
+        /* --- KONTEN UTAMA KANAN --- */
+        .main-content {
+            flex: 1; /* Membuat area ini mengisi seluruh sisa layar */
+            padding: 30px;
+            overflow-x: auto; /* Mencegah tabel terpotong di layar kecil */
+        }
+
+        .main-content h1 {
+            color: var(--dark-red);
+            margin-bottom: 5px;
+        }
+
+        /* --- STYLING TABEL HTML --- */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Menyatukan garis batas tabel */
+            margin-top: 25px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td { 
+            padding: 15px; 
+            text-align: left; 
+            border-bottom: 1px solid #eee; 
+        }
+
+        th { 
+            background-color: var(--light-green); 
+            color: var(--dark-green); 
+        }
+
+        tr:hover { 
+            background-color: #f9f9f9; 
+        }
+
+        /* Label Status Pesanan */
+        .status { 
+            padding: 5px 12px; 
+            border-radius: 15px; 
+            font-size: 12px; 
+            font-weight: bold; 
+        }
+        .status.menunggu { background-color: #ffeaa7; color: #d35400; }
+        .status.selesai { background-color: #55efc4; color: #00b894; }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media screen and (max-width: 768px) {
+            body { 
+                flex-direction: column; /* Mengubah susunan menyamping jadi atas-bawah */
+            } 
+            .sidebar { 
+                width: 100%; 
+                padding: 15px;
+            }
+            .sidebar h2 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }

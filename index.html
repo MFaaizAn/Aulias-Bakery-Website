@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="bakery terenak, terlengkap dan termurah yang ada di Indonesia">
+    <title>Aulia's Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Aulia's Bakery</div>
+        <ul>
+            <li><a href="#home">Profil</a></li>
+            <li><a href="#best-seller">Best Seller</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="cake-icon top-left cupcake"></div>
+        <div class="cake-icon top-right croissant"></div>
+        <div class="cake-icon bottom-left bread"></div>
+        <div class="cake-icon bottom-right muffin"></div>
+        <div class="cake-icon center-top donut"></div>
+        <div class="cake-icon center-bottom cookie"></div>
+
+        <div class="profile-content">
+            <div class="mobile-icon-row mobile-only top">
+                <div class="icon-item cupcake"></div>
+                <div class="icon-item bread"></div>
+                <div class="icon-item croissant"></div>
+            </div>
+
+            <h1>Selamat Datang di Aulia's Bakery</h1>
+            <p>Berdiri sejak 2020, kami menyajikan aneka roti dan kue yang dipanggang segar setiap hari. Dibuat dengan bahan-bahan premium pilihan dan sentuhan cinta, kami siap menemani setiap momen manis dalam hidup Anda.</p>
+            <a href="#menu" class="btn">Lihat Menu Kami</a>
+
+            <div class="mobile-icon-row mobile-only bottom">
+                <div class="icon-item bread"></div>
+                <div class="icon-item croissant"></div>
+                <div class="icon-item muffin"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="best-seller">
+        <h2>Best Seller Kami</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="./assets/images/shortcake.jpg" alt="Strawberry Cake">
+                <h3>Strawberry Shortcake</h3>
+                <p>Kue spons lembut dengan krim segar dan stroberi asli.</p>
+                <div class="price">Rp 45.000</div>
+                <button class="btn">Pesan Sekarang</button>
+            </div>
+            <div class="card">
+                <img src="./assets/images/cupcake.jpg" alt="Cupcake">
+                <h3>Rose Velvet Cupcake</h3>
+                <p>Cupcake red velvet lezat dengan cream cheese frosting.</p>
+                <div class="price">Rp 25.000</div>
+                <button class="btn">Pesan Sekarang</button>
+            </div>
+            <div class="card">
+                <img src="./assets/images/croissant.jpg" alt="Matcha Croissant">
+                <h3>Matcha Croissant</h3>
+                <p>Croissant renyah berlapis dengan isian krim matcha manis.</p>
+                <div class="price">Rp 30.000</div>
+                <button class="btn">Pesan Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="cake-icon menu-icon-center menu1"></div>
+
+        <h2>Daftar Menu Tersedia</h2>
+            <div class="menu-grid" id="daftar-menu-dinamis">
+
+            </div>
+    </section>
+
+    <section id="keranjang">
+        <h2>Keranjang Belanja</h2>
+        <div class="cart-container">
+            
+            <div class="cart-list">
+                </div>
+            
+            <hr class="cart-divider">
+            
+            <div class="cart-total">
+                <strong>Total Belanja:</strong>
+                <strong id="total-harga">Rp 0</strong>
+            </div>
+            
+            <button class="btn checkout-btn">Checkout Sekarang</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Hubungi Kami</h2>
+        <div class="contact-info">
+            <p>📍 Jl. Harja Mekar, Kec. Cikarang Utara, Kabupaten Bekasi, Jawa Barat.</p>
+            <p>📞 WhatsApp: <a href="https://wa.me/085711415268">+62 857-1141-5268</a></p>
+            <p>📱 Instagram: <a href="https://www.instagram.com/auliactr4?igsh=MTBmMW8yeTNwaXEybA==">@auliactr4</a></p>
+            <p>Jam Buka: Senin - Minggu (08:00 - 21:00)</p>
+            <br>
+            <div>
+                <a href="https://wa.me/085711415268" class="btn">Kirim Pesan WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Aulia's Bakery. All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

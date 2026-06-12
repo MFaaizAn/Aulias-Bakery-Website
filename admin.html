@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Aulia's Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adminstyle.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>Aulia's Admin</h2>
+        <a href="#" class="active">📦 Pesanan Masuk</a>
+        <a href="#">🍞 Stok Roti</a>
+        <a href="#">⚙️ Pengaturan</a>
+        <a href="index.html" style="margin-top: auto;">⬅️ Kembali ke Toko</a>
+    </aside>
+
+    <main class="main-content">
+        <h1>Daftar Pesanan Masuk</h1>
+        <p>Kelola pesanan dari pelanggan di sini.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Pesanan</th>
+                    <th>Nama Pelanggan</th>
+                    <th>Detail Pesanan</th>
+                    <th>Total Harga</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="body-tabel-pesanan">
+                <tr>
+                    <td>#ORD-001</td>
+                    <td>Budi Santoso</td>
+                    <td>2x Choco Lava Cake, 1x Roti Tawar</td>
+                    <td>Rp 95.000</td>
+                    <td><span class="status menunggu">Menunggu</span></td>
+                </tr>
+                <tr>
+                    <td>#ORD-002</td>
+                    <td>Siti Aminah</td>
+                    <td>1x Strawberry Shortcake</td>
+                    <td>Rp 45.000</td>
+                    <td><span class="status selesai">Selesai</span></td>
+                </tr>
+                <tr>
+                    <td>#ORD-003</td>
+                    <td>Andi Pratama</td>
+                    <td>3x Roti Tawar Gandum</td>
+                    <td>Rp 75.000</td>
+                    <td><span class="status menunggu">Menunggu</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>    
+

@@ -1,0 +1,479 @@
+:root {
+            --dark-red: #893941;
+            --pink: #CB7885;
+            --light-green: #D4D994;
+            --dark-green: #5E6623;
+            --bg-light: #FDFBFB;
+            --text-dark: #333333;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Chewy", system-ui;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            background-color: var(--dark-red);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--light-green);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--pink);
+            color: white;
+        }
+
+        /* --- BUTTON STYLES --- */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--dark-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--pink);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(203, 120, 133, 0.4);
+        }
+
+        /* --- SECTIONS SPACING --- */
+        section {
+            padding: 100px 50px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1, h2 {
+            color: var(--dark-red);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--pink);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- HOME / PROFILE SECTION --- */
+        #home {
+            background-color: var(--bg-light);
+            text-align: center;
+            align-items: center;
+            position: relative; 
+            overflow: hidden; 
+        }
+
+        .profile-content {
+            max-width: 800px;
+            z-index: 2; 
+        }
+
+        .profile-content h1 {
+            font-size: 48px;
+            color: var(--dark-red);
+        }
+
+        .profile-content p {
+            font-size: 18px;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+        }
+
+        /* --- CAKE SKETCH ICONS (DESKTOP) --- */
+        .cake-icon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 1; 
+            z-index: 1; 
+        }
+
+        /* Definisi Class Ikon URL */
+        .cupcake { background-image: url("./assets/images/cupcakeIcon.png"); }
+        .croissant { background-image: url("./assets/images/croissantIcon.png"); }
+        .bread { background-image: url("./assets/images/breadIcon.png"); }
+        .muffin { background-image: url("./assets/images/muffinIcon.png"); }
+        .donut { background-image: url("./assets/images/donutIcon.png"); }
+        .cookie { background-image: url("./assets/images/cookieIcon.png"); }
+        
+        /* Ikon Menu Baru */
+        .menu1 { background-image: url("./assets/images/menu1.png"); }
+
+        /* Posisi Desktop Home */
+        .top-left { top: 20%; left: 10%; transform: rotate(-15deg); }
+        .top-right { top: 20%; right: 10%; transform: rotate(15deg); }
+        .center-top { top: 20%; left: 50%; transform: translateX(-50%) rotate(10deg); }
+        
+        .bottom-left { bottom: 15%; left: 10%; transform: rotate(15deg); }
+        .bottom-right { bottom: 15%; right: 10%; transform: rotate(-15deg); }
+        .center-bottom { bottom: 7%; left: 50%; transform: translateX(-50%) rotate(-10deg); }
+
+        /* --- POSISI DESKTOP IKON MENU (Tengah Persis) --- */
+        /* Ubah nilai 'top' untuk mengatur tinggi ikon dari judul menu */
+        .menu-icon-center { 
+            top: 5%; 
+            left: 50%; 
+            transform: translateX(-50%) rotate(0deg); 
+        }
+
+        /* Mobile icons hidden by default on desktop */
+        .mobile-only { display: none; }
+
+        /* --- BEST SELLER SECTION --- */
+        #best-seller {
+            background-color: var(--light-green);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(137, 57, 65, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background-color: #eee;
+        }
+
+        .card h3 {
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .card .price {
+            color: var(--pink);
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* --- MENU SECTION --- */
+        #menu {
+            background-color: white;
+            position: relative; 
+            overflow: hidden; 
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            max-width: 1000px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 2; 
+        }
+
+        .menu-item {
+            border: 1px solid var(--light-green);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            background-color: white; 
+        }
+
+        .menu-item:hover {
+            background-color: var(--light-green);
+        }
+
+        .menu-item h4 {
+            color: var(--dark-red);
+        }
+
+        .menu-item span {
+            color: var(--dark-green);
+            font-weight: bold;
+        }
+
+        /* --- CONTACT SECTION & FOOTER --- */
+        #contact {
+            background-color: var(--dark-green);
+            color: white;
+            min-height: auto;
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: var(--light-green);
+        }
+
+        #contact h2::after {
+            background-color: var(--light-green);
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        .contact-info a {
+            color: var(--pink);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            color: var(--light-green);
+        }
+
+        footer {
+            background-color: #3b4015;
+            color: var(--light-green);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* --- MEDIA QUERIES (RESPONSIVE) --- */
+        
+        /* Tablet & iPad (max-width: 768px) */
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            section {
+                padding: 130px 20px 40px;
+            }
+
+            .profile-content h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .card-container {
+                gap: 20px;
+            }
+
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        /* Mobile Phone (max-width: 480px) */
+        @media screen and (max-width: 480px) {
+            #home .cake-icon { display: none; }
+            
+            /* --- POSISI MOBILE IKON MENU (Tengah Persis) --- */
+            #menu .cake-icon {
+                display: block; 
+                width: 60px; /* Ukuran ikon di HP */
+                height: 60px;
+            }
+
+            #menu .cake-icon.menu-icon-center {
+                top: 30px; /* Jarak ikon dari atas section menu di layar HP */
+                left: 50%; /* Memastikan persis di tengah layar */
+                transform: translateX(-50%) rotate(0deg); 
+            }
+
+            #menu h2 {
+                margin-top: 60px; /* Jarak agar tulisan menu tidak tertimpa ikon */
+            }
+            /* ---------------------------------- */
+
+            .mobile-only { display: flex; } 
+
+            .mobile-icon-row {
+                display: flex;
+                justify-content: center;
+                gap: 10px; 
+                margin: 0; 
+            }
+            .mobile-icon-row.top { margin-bottom: 10px; }
+            .mobile-icon-row.bottom { margin-top: 15px; }
+
+            .icon-item {
+                width: 30px; 
+                height: 30px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .profile-content h1 {
+                margin-top: 0;
+                font-size: 28px;
+                margin-bottom: 5px;
+            }
+
+            .profile-content p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                font-size: 16px;
+            }
+        }
+
+        .btn small{
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+
+        #keranjang {
+            background-color: var(--light-green);
+        }
+
+        .cart-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            width: 100%;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: var(--dark-green);
+        }
+
+        .cart-divider {
+            border: none;
+            border-top: 2px dashed var(--pink);
+            margin: 20px 0;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 22px;
+            color: var(--dark-red);
+            margin-bottom: 25px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px;
+        }
